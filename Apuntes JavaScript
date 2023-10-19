@@ -1,0 +1,642 @@
+ //DECLARACION DE VARIABLES DE DISTINTOS TIPOS DE DATOS
+            var nombre = "Juan";    //CADENA
+            var numero = 123, n;       //ENTERO
+            var costo = 123.56;     //REAL
+            var band = true;        //LOGICO
+
+            console.log(numero);
+           console.log(nombre);
+           console.log(costo);
+            console.log(band);
+
+            //Declarar varias variables con una sola instrucción var y comas (,)
+            var producto1 = 'Computadora',
+            disponible2 = true,
+            categoria = 'Computadora';
+
+            //Estilos para las variables
+           var nombre_producto = 'Monitor HD'; //underscore
+           var nombreProducto = 'Monitor HD'; //Camel case
+           var NombreProducto = 'Monitor HD'; //Pascal case
+           var nombreproducto = 'Monitor HD';
+
+           console.log(nombre_producto);
+           console.log(nombreProducto);
+           console.log(NombreProducto);
+           console.log(nombreproducto);
+
+
+
+
+            //2.let (más utilizada)
+            let producto = 'Audifonos Gamer'; //variable con valor asignado
+            let disponible; //variable sin asignar valor
+            console.log(disponible);
+            
+            // producto = true;|
+            disponible = true;
+            console.log(disponible);
+
+            //Declarar varias variables con una sola instrucción let y comas (,)
+            let producto1 = 'Computadora',
+                disponible2 = true,
+                categoria = 'Computadora';
+
+            //Estilos para las variables
+            let nombre_producto = 'Monitor HD'; //underscore
+            let nombreProducto = 'Monitor HD'; //Camel case
+            let NombreProducto = 'Monitor HD'; //Pascal case
+            let nombreproducto = 'Monitor HD';
+
+            console.log(producto);
+            console.log(disponible);
+            console.log(producto1);
+            console.log(categoria);
+
+
+
+
+            //3. Utilizando const
+const producto = 'Audifonos Gamer'; //variable con valor asignado
+const disponible = true;  //No se pueden declarar variables sin asignar valor
+
+disponible = true; //No se puede reasignar un valor
+
+//Declarar varias variables con una sola instrucción let y comas (,)
+const producto1 = 'Computadora',
+disponible2 = true,
+categoria = 'Computadora';
+
+//Estilos para las variables
+const nombre_producto = 'Monitor HD'; //underscore
+const nombreProducto = 'Monitor HD'; //Camel case
+const NombreProducto = 'Monitor HD'; //Pascal case
+const nombreproducto = 'Monitor HD';
+
+console.log(producto);
+console.log(disponible);
+console.log(producto1);
+console.log(categoria);
+
+
+let numero = 1;
+            let nombre = "Laura";
+            let costo;
+            let band=false;
+            //ASIGNACION
+            costo = 456;
+            //INSTRUCIONES PARA VISUALIZAR CONTENIDO DE VARIABLES
+            document.write("<h2>Variable numerica=" +  numero +"</h2><br>");
+            document.write("<h2>Variable cadena= " + nombre + "</h2><br>");
+            alert("Varible real= " + costo);
+            alert("Varible logica= " + band); 
+
+
+
+
+
+  //Cadenas de texto
+//Forma común de declarar
+const producto = "Monitor de 20 pulgadas";
+console.log(producto);
+console.log(typeof producto); //typeof indica el tipo de datos de una variable
+
+//Forma menos comun de declarar cadena
+const producto2 = String("Monitor de 20 pulgadas");
+console.log(producto2);
+console.log(typeof producto2);
+
+//Otra forma de declarar cadena
+const producto3 = new String ('Monitor de 20 pulgadas');
+console.log(producto3); 
+console.log(typeof producto3); 
+
+//Para mostrar comillas dobles dentro del valor
+const producto4 = '"Monitor de 20 pulgadas"';
+console.log(producto4);
+const producto5 = "\"Monitor de 20 pulgadas\"";
+console.log(producto5);
+
+//Métodos para utilizar con cadenas
+const tweet = 'Aprendiendo JavaScript con el curso de Desarrollo Web Completo';
+const prod2 = '"Monitor HD"';
+
+console.log(tweet.length);  //Mostrar la longitud de la cadena
+//Buscar una palabra dentro de la cadena y retorna posición
+console.log(tweet.indexOf('JavaScript'));   
+console.log(tweet.indexOf('tablet'));   
+//Buscar una palabra dentro de la cadena y retorna true o false
+console.log(tweet.includes('JavaScript'));
+console.log(tweet.includes('X'));
+console.log(producto2); 
+
+
+
+            //Objeto Math
+let resultado;
+
+resultado = Math.PI;
+console.log(resultado);
+resultado = Math.round(2.5); //redondedo
+console.log(resultado);
+resultado = Math.ceil(2.1); //Redondeo hacia arriba
+console.log(resultado);
+resultado = Math.floor(2.8); //Redondeo hacia abajo
+console.log(resultado);
+resultado = Math.sqrt(144); //Raíz cuadrada
+console.log(resultado);
+resultado = Math.abs(-200); //Valor absoluto
+console.log(resultado);
+resultado = Math.min(3,5,1,8,9,2,15); //Valor mínimo
+console.log(resultado);
+resultado = Math.max(3,5,1,8,9,2,15); //Valor máximo
+console.log(resultado);
+resultado = Math.floor( Math.random()  * 30); //Valor aleatorio
+console.log(resultado);
+
+
+            
+// Objetos
+//En lugar de variables se puede almacenar información en objetos
+//almacena diversas propiedades
+const producto = {
+    nombreProducto : "Monitor 20 Pulgadas",
+    precio: 300,
+    disponible: true
+}
+
+//Acceso a las propiedades del objeto por el operador punto
+console.log(producto.nombreProducto);
+console.log(producto.precio);
+console.log(producto.disponible);
+
+//Otra forma de acceder a la propiedad es por medio de corchetes
+console.log(producto["nombreProducto"]);
+console.log(producto["precio"]);
+console.log(producto["disponible"]);
+
+// Agregar nuevas propiedades al objeto que ya existe
+producto.imagen = 'imagen.jpg'; 
+console.log(producto);
+
+// Eliminar propiedades del objeto
+delete producto.disponible;
+console.log(producto);
+
+// Forma anterior de extraer valores
+const p = producto.precio;
+const n = producto.nombreProducto;
+console.log(p);
+console.log(n);
+
+// Destructuring - Nueva forma de extraer valores
+// Entre llaves deben colocarse los mismos nombres que las propiedades
+const {precio, nombreProducto} = producto;
+console.log(precio);
+console.log(nombreProducto);
+
+// .freeze .seal
+//Object.freeze(producto); 
+Object.seal(producto);
+
+//Producto congelado
+console.log(producto);
+producto.precio = 'NUEVO PRECIO'; //Con freeze el valor no cambia, con seal si cambia
+console.log(producto);
+delete producto.precio; //freeze o seal no permiten eliminar una propiedad
+console.log(producto);
+
+//Nuevo  objeto
+const medidas = {
+    peso: '1kg',
+    medida: '1m'
+}
+
+
+//Unión de objetos
+const nuevoProducto = { ...producto, ...medidas };
+
+console.log(producto);
+console.log(medidas)
+console.log(nuevoProducto);
+
+//Arreglos o Arrays
+const numeros = [10,20,30,40,50];
+
+// Acceder a los valores de un arreglo
+console.log(numeros[0]);
+console.log(numeros[1]);
+console.log(numeros[2]);
+console.log(numeros[3]);
+console.log(numeros[4]);
+
+// Conocer la extensión de un arreglo
+console.log(numeros.length);
+
+numeros.forEach( function(numero) {
+    console.log(numero);
+})
+
+numeros.push(60,70,80); // Al final del arreglo
+console.table(numeros);
+numeros.unshift(-10,-20,-30); // al inicio del arreglo
+console.log(numeros);
+
+const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'];
+
+console.table(meses);
+meses.pop(); // elimina el último elemento
+meses.shift(); // elimina el primer elemento
+console.table(meses);
+
+meses.splice(2, 1);
+console.table(meses);
+
+// Rest Operator o Spread Operator
+const nuevoArreglo = [ ...meses, 'Junio'];
+console.log(nuevoArreglo);
+console.table(nuevoArreglo);
+
+const carrito = [
+    { nombre: 'Monitor 20 Pulgadas', precio: 500 },
+    { nombre: 'Televisión 50 Pulgadas', precio: 700 },
+    { nombre: 'Tablet', precio: 300 },
+    { nombre: 'Audifonos', precio: 200 },
+    { nombre: 'Teclado', precio: 50 },
+    { nombre: 'Celular', precio: 500},
+    { nombre: 'Bocinas', precio: 300},
+    { nombre: 'Laptop', precio: 800},
+    { nombre: 'Consola', precio: 2800},
+];
+
+console.table(carrito);
+
+// forEach - Recorrer el arreglo
+let encontrado = false;
+meses.forEach(function(mes) {
+    if(mes == 'Marzo') {
+        console.log('Marzo si existe');
+        encontrado=true;
+    } 
+});
+
+
+
+//Validar si no fue encontrado, para mostrar mensaje
+if(!encontrado){
+    console.log('No existe ese mes.');
+}
+
+
+
+// Includes - Búsqueda y retorna V/F
+let resultado = meses.includes('Diciembre');
+console.log(resultado);
+
+// Some - ideal para arreglo de objetos
+resultado = carrito.some(function(producto) {
+    return producto.nombre === 'Celular PRO'
+})
+console.log(resultado);
+
+// Reduce
+resultado = carrito.reduce(function(total, producto) {
+    return total + producto.precio
+}, 0);
+console.log(resultado);
+
+// Filter - Busqueda condicionada por precio o nombre
+resultado = carrito.filter(function(producto) {
+    return producto.precio > 400
+});
+console.table(resultado);
+
+resultado = carrito.filter(function(producto) {
+    return producto.nombre !== 'Celular'
+});
+console.table(resultado);
+
+
+//
+
+
+function sumar(n1, n2) {
+    return n1 + n2;
+}
+
+const resultado = sumar(2, 3);
+console.log(resultado);
+
+
+let total = 0;
+function agregarCarrito(precio) {
+   return total += precio;
+}
+
+function calcularImpuesto(total) {
+   return 1.15 * total;
+}
+
+total = agregarCarrito(200);
+total = agregarCarrito(400);
+total = agregarCarrito(600);
+console.log(total);
+
+const totalAPagar = calcularImpuesto(total);
+console.log(`El total a pagar con impuestos es de: $${totalAPagar}`);
+
+
+//
+
+
+function sumar(numero1 = 0, numero2 = 0) { // numero1, 2 son parametros
+    console.log(  numero2 + numero1);
+}
+sumar(10, 5); // Argumentos o los valores reales
+sumar(3, 3);
+sumar(3, 6);
+sumar(1);
+
+const sumar2 = function(n1, n2) {
+    console.log(n1 + n2);
+}
+sumar2(5, 10);
+
+//
+
+
+function sumar(n1, n2) {
+    return n1 + n2;
+}
+
+const resultado = sumar(2, 3);
+console.log(resultado);
+
+
+let total = 0;
+function agregarCarrito(precio) {
+   return total += precio;
+}
+
+function calcularImpuesto(total) {
+   return 1.15 * total;
+}
+
+total = agregarCarrito(200);
+total = agregarCarrito(400);
+total = agregarCarrito(600);
+console.log(total);
+
+const totalAPagar = calcularImpuesto(total);
+console.log(`El total a pagar con impuestos es de: $${totalAPagar}`);
+
+
+// Métodos de propiedad
+const reproductor = {
+    reproducir : function(id) {
+        console.log(`Reproduciendo Canción con el ID: ${id}`)
+    },
+    pausar: function() {
+        console.log('Pausando...')
+    },
+    crearPlaylist: function(nombre) {
+        console.log(`Creando la playlist: ${nombre}`)
+    },
+    reproducirPlaylist: function(nombre) {
+        console.log(`Reproduciendo la playlist: ${nombre}`)
+    },
+}
+//Agregando una propiedad, después de declarar
+reproductor.borrarCancion = function(id) {
+    console.log(`Eliminando la canción: ${id}`)
+}
+
+reproductor.reproducir(3840);
+reproductor.pausar();
+reproductor.borrarCancion(20);
+reproductor.crearPlaylist('Heavy Metal');
+reproductor.reproducirPlaylist('Heavy Metal');
+
+
+
+
+//Operadores relacionales 
+const puntaje = 100;
+if(puntaje !== 1000) { 
+    console.log('No es igual')
+ } else {
+    console.log('Si el puntaje es 1000');
+ }
+
+const efectivo = 1000;
+const carrito = 800;
+if( efectivo > carrito ) {
+    console.log('El Usuario puede pagar');
+} else {
+    console.log('Fondos Insuficientes');
+}
+
+//Comparar cadenas
+const rol = 'VISITANTE';
+if(rol === 'ADMINISTRADOR') {
+   console.log('Acceso a todo el sistema');
+} else if(rol === 'EDITOR') {
+   console.log('Eres editor, puedes entrar pero no puedes hacer mucho')
+} else {
+   console.log('No tienes acceso')
+}
+
+
+
+const metodoPago = 'efectivo';
+
+switch(metodoPago) {
+    case 'tarjeta':
+        console.log('Pagaste con tarjeta');
+        break;
+    case 'cheque':
+        console.log('El usuario va a pagar con cheque, revisaremos los fondos primero');
+        break;
+    case 'efectivo':
+        console.log('Pagaste con efectivo');
+        break;
+    default:
+        console.log('Aún no has pagado');
+        break;
+}
+
+
+const carrito = [
+    { nombre: 'Monitor 20 Pulgadas', precio: 500 },
+    { nombre: 'Televisión 50 Pulgadas', precio: 700 },
+    { nombre: 'Tablet', precio: 300 },
+    { nombre: 'Audifonos', precio: 200 },
+    { nombre: 'Teclado', precio: 50 },
+    { nombre: 'Celular', precio: 500},
+    { nombre: 'Bocinas', precio: 300},
+    { nombre: 'Laptop', precio: 800}
+];
+
+// Ciclo ForEach
+carrito.forEach( producto => console.log(producto.nombre));
+
+// map
+const arreglo2 = carrito.map( producto => `${producto.nombre} - ${producto.precio}`);
+
+console.log(arreglo2);
+
+
+
+
+
+// Ciclo For
+for( let i = 0; i < 10; i++ ) {
+    console.log(i);
+}
+
+//  for( let i = 1; i <= 100; i++ ) {
+//      if( i % 2 === 0 ) {
+//          console.log(`El Número ${i} es PAR`);
+//      } else {
+//          console.log(`El Número ${i} es IMPAR`);
+//      }
+//  }
+
+const carrito = [
+   { nombre: 'Monitor 20 Pulgadas', precio: 500 },
+   { nombre: 'Televisión 50 Pulgadas', precio: 700 },
+   { nombre: 'Tablet', precio: 300 },
+   { nombre: 'Audifonos', precio: 200 },
+   { nombre: 'Teclado', precio: 50 },
+   { nombre: 'Celular', precio: 500},
+   { nombre: 'Bocinas', precio: 300},
+   { nombre: 'Laptop', precio: 800}
+];
+
+for(let i = 0; i < carrito.length; i++ ) {
+   console.log( carrito[i].nombre );
+}
+
+// Ciclo While
+//  let i = 0; // Indice
+//  while(i < 10) { // Condición
+//      console.log('Desde el while loop');
+//      i++;  // Incremento
+//  }
+
+// Ciclo Do While 
+let i = 100;
+do {
+   console.log(i);
+   i++;
+} while( i < 10);
+
+
+
+
+// This
+const reservacion = {
+    nombre: 'Juan',
+    apellido: 'De la torre',
+    total: 5000,
+    pagado: false,
+    informacion: function() {
+        console.log(`El Cliente ${this.nombre} reservó y su cantidad a pagar es de ${this.total}`);
+    }
+}
+
+const reservacion2 = {
+    nombre: 'Pedro',
+    apellido: 'De la torre',
+    total: 5000,
+    pagado: false,
+    informacion: function() {
+        console.log(`El Cliente ${this.nombre} reservó y su cantidad a pagar es de ${this.total}`);
+    }
+}
+
+reservacion.informacion();
+reservacion2.informacion();
+
+
+// POO 
+/** Object Literal */
+const producto = {
+    nombre: 'Tablet',
+    precio: 500
+}
+
+// Constructor de Clase Cliente y método (formatearCliente)
+function Cliente(nombre, apellido) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+}
+Cliente.prototype.formatearCliente = function() {
+    return `El Cliente ${this.nombre} ${this.apellido}`;
+}
+
+// Constructor de Clase Producto y método (formatearCliente)
+function Producto(nombre, precio) {
+    this.nombre = nombre;
+    this.precio = precio;
+}
+// Crear funciones que solo se utilizan en un objeto en especifico.
+Producto.prototype.formatearProducto = function() {
+    return `El Producto ${this.nombre} tiene un precio de: $ ${this.precio}`;
+}
+
+//Declaración de objetos de las clases Cliente y Producto
+const producto2 = new Producto('Monitor Curvo de 49"', 800);
+const producto3 = new Producto('Laptop', 300);
+const cliente = new Cliente('Juan', 'De la torre');
+
+console.log(producto2);
+console.log(producto2.formatearProducto() );
+console.log(producto3.formatearProducto() );
+
+// Classes
+class Producto {
+    constructor(nombre, precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
+    formatearProducto() {
+        return `El Producto ${this.nombre} tiene un precio de: $ ${this.precio}`;
+    }
+}
+
+const producto2 = new Producto('Monitor Curvo de 49"', 800);
+const producto3 = new Producto('Laptop', 300);
+
+// Herencia
+class Libro extends Producto {
+    constructor(nombre, precio, isbn) {
+        super(nombre, precio);
+        this.isbn = isbn;
+    }
+
+    formatearProducto() {
+        return `${super.formatearProducto() } y su ISBN es ${this.isbn}`;
+    }
+}
+
+const libro = new Libro('JavaScript la Revolución', 120, '910313981389139');
+console.log(libro.formatearProducto() );
+console.log(producto2.formatearProducto());
+
+//
+
+const numero1 = 20;
+const numero3 = 30;
+
+console.log(numero1);
+
+//manejo de excepciones try-catch
+try {
+    console.log(numero2);
+} catch (error) {
+    console.log(error);
+}
+
+console.log(numero3);
