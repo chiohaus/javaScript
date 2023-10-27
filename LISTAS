@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{background-color: aquamarine;
+        color:rgb(32, 33, 33);}
+        
+        
+        p{background-color: rgb(185, 169, 169);
+        color:rgb(32, 33, 33);
+        font-size: larger;}
+        
+           </style>
+        
+        <link rel="stylesheet" href="css/estilo.css"> 
+        
+            <title>Proyecto Web</title>
+        </head>
+        <body>
+            <!---www.w3schools.com    tutoriales-->
+        <!---Encabezado-->
+            <header>
+                <h1 style="text-align: center; color: blueviolet;" >Título principal</h1> 
+            </header>
+        <!---Navegacion principal-->
+            <nav>
+         <a href="index.html">  Inicio</a>       
+        <a href="https://www.google.com" target = "_blank"> Google</a>
+        <a href="otraPagina.html"> Tablas </a>
+        <a href="formulario.html">Formulario</a>
+        <a href="index.html">Listas</a>
+        <a href = "terceraPagina.html"> Tercera Pagina </a>
+            </nav>
+<main>
+
+    <h1>Listas</h1>
+    <div>
+    <p>Extisten tres tipos de istas, mediante las cuales se muestra un aserie de opciones, estas son:</p>
+</div>
+    <div>
+    <h2>1. Listas desordenadas</h2>
+     <!--Encabezado de etiqueta-->
+    <ul>
+    <li>Opcion1</li>
+    <li>Opcion2</li>
+    <li>Opcion3</li>
+    <li>Opcion4</li>
+    <li>Opcion5</li>
+</ul>
+</div>
+    <div>
+    <h2>2. Listas ordenadas</h2>
+    <ol type="1" start="5">
+        <li>Alfa</li>
+        <li>Beta</li>
+        <li>Gamma</li>
+        <li>Eta</li>
+        <li>Theta</li>
+ </ol>
+ <ol type="A">
+    <li>Alfa</li>
+    <li>Beta</li>
+    <li>Gamma</li>
+    <li>Eta</li>
+    <li>Theta</li>
+</ol>
+<ol type="a">
+    <li>Alfa</li>
+    <li>Beta</li>
+    <li>Gamma</li>
+    <li>Eta</li>
+    <li>Theta</li>
+</ol>
+<ol type="I" start="10">
+    <li>Alfa</li>
+    <li>Beta</li>
+    <li>Gamma</li>
+    <li>Eta</li>
+    <li>Theta</li>
+</ol>
+<ol type="i" start="10">
+    <li>Alfa</li>
+    <li>Beta</li>
+    <li>Gamma</li>
+    <li>Eta</li>
+    <li>Theta</li>
+</ol>
+</div>
+    <div>
+    <h2>3. Listas de descripcion</h2>
+<dl>
+  Lista de opciones  <!--Encabezado-->
+</dl>
+<dt>Categoria</dt><!--Descripcion-->
+<dd>Producto A</dd><!--item-->
+<dd>Producto B</dd>
+<dd>Producto C</dd>
+<dd>Producto D</dd>
+
+<dt>Nivel</dt>
+<dd>Producto A</dd>
+<dd>Producto B</dd>
+<dd>Producto C</dd>
+<dd>Producto D</dd>
+
+<dt>Peso</dt>
+<dd>Producto A</dd>
+<dd>Producto B</dd>
+<dd>Producto C</dd>
+<dd>Producto D</dd>
+</div>
+<hr>
+
+<h1>Menu desplegable</h1>
+<div class="depsliegue">
+<!--Opcion de menu-->
+<span>Archivo</span>
+<div class="despliegue-opciones">
+<p>Nuevo</p>
+<p>Abrir</p>
+<p>Grabar</p>
+<p>Grabar como</p>
+</div>
+<br>
+</div>
+
+<div class="despliegue2">
+<!--Opcion 2 de menu desplegable-->
+<ul>
+<li><a href="index.html"></a>Edicion</li>
+<li class="dropdown"></li>
+<li>
+    <a ref="javascript:void(0)">Edicion</a>
+<div class="Dropdown-content">
+<a href="#">Copiar</a>
+<a href="#">Pegar</a>
+<a href="#">Buscar</a>
+<a href="#">Reemplazar</a>
+</div>
+</li>
+<li><a href="#">Vista</a></li>
+</ul>
+
+
+</div>
+
+</main>
+   
+
+    <footer>
+        <cite>Todos los derechos reservados: Chiohaus</cite>
+    </footer> 
+ 
+    
+</body>
+</html>
